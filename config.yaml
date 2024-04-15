@@ -1,2 +1,11 @@
 theme: osuny-hugo-theme-aaa
+paginate: 18
+enableRobotsTXT: true
+removePathAccents: true
 params:
+  summary:
+    position: content
+  breadcrumb:
+    position: after-hero
+  search:
+    active: true
