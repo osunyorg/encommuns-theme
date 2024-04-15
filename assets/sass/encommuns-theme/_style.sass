@@ -1,22 +1,43 @@
 body
     &::after
         backdrop-filter: blur(10px)
+img
+    border-radius: $image-border-radius
 #document-header
+    // Ombre sous le menu
     filter: drop-shadow(0 0 8px #00000006)
+    @include media-breakpoint-up(desktop)
+        .container
+            // 3 parties égales
+            > *
+                flex: 1
+            // Logo centré
+            .logo
+                img
+                    margin-left: auto
+                    margin-right: auto
+            // Menu à droite
+            .menu
+                .nav-level-1
+                    justify-content: end
+    // Petit filet sous le menu des thématiques
     .dropdown-menu
         border-top: solid 1px $color-border
-    @include media-breakpoint-down(desktop)
-        .site-name
-            display: none
-    @include media-breakpoint-up(desktop)
-        .site-name
+    // Nom du site à gauche
+    .site-name
+        // Pas en mobile
+        display: none
+        @include media-breakpoint-up(desktop)
+            display: block
             @include meta
             a
                 color: $color-accent
                 text-decoration: none
-        .menu
+    .menu
+        @include media-breakpoint-up(desktop)
+            // Bouton thématiques
             span
-                border-radius: 4px
+                border-radius: $btn-border-radius
             [aria-expanded=true]
                 background: $color-background
                 color: $color-accent !important
@@ -34,6 +55,55 @@ body
                             color: $color-accent
                             font-size: pxToRem(40)
                             font-weight: bold
+
+.posts__page
+    @include media-breakpoint-up(desktop)
+        .hero
+            .content
+                display: block
+                .hero-text
+                    width: columns(8)
+                    margin-left: offset(2)
+                    margin-bottom: $spacing-5
+                figure
+                    // Utilisé à l'envers pour avoir un léger écart
+                    margin-left: columns(2)
+                    // Utilisé à l'envers pour retomber sur la colonne
+                    max-width: offset(9)
+                    width: 100%
+            &--image-portrait
+                .content
+                    figure
+                        // Utilisé à l'envers pour retomber sur la colonne
+                        width: offset(4)
+        .post-sidebar
+            > div
+                position: relative !important
+                top: 0 !important
+                .post-infos
+                    > li
+                        border: none !important
+                        display: block
+                        > span
+                            display: block
+                        > ul
+                            text-align: left
+                            > li
+                                margin-left: 0
+                                margin-right: $spacing-2
+                .toc-container
+                    padding-top: $spacing-2 !important
+                    border: none !important
+        // .document-content 
+        //     .block 
+        //         .block-content
+        //             // padding-left: offset(2) !important
+        //             // padding-right: offset(2) !important
+        //             // width: columns(6)
+.post 
+    .media 
+        img
+            aspect-ratio: 1
 #document-footer
     border-top: solid 1px $color-border
     padding-top: 0 !important
