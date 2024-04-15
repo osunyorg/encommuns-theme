@@ -9,3 +9,6 @@ params:
     position: none
   search:
     active: true
+  persons:
+    single:
+      backlinks: true
