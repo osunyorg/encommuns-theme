@@ -1,0 +1,17 @@
+.blocks
+    .block-posts
+        @include in-page-without-sidebar
+            &--large 
+                .large 
+                    .post 
+                        .post-title
+                            font-weight: bold
+            &--list
+                    article
+                        justify-content: space-between
+                        .post-meta
+                            position: relative !important
+                        .media
+                            order: 2
+                            img
+                                aspect-ratio: 1

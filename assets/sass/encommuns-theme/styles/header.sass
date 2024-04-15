@@ -1,0 +1,52 @@
+#document-header
+    // Ombre sous le menu
+    filter: drop-shadow(0 0 8px #00000006)
+    @include media-breakpoint-up(desktop)
+        .container
+            // 3 parties égales
+            > *
+                flex: 1
+            // Logo centré
+            .logo
+                img
+                    margin-left: auto
+                    margin-right: auto
+            // Menu à droite
+            .menu
+                .nav-level-1
+                    justify-content: end
+    // Petit filet sous le menu des thématiques
+    .dropdown-menu
+        border-top: solid 1px $color-border
+    // Nom du site à gauche
+    .site-name
+        // Pas en mobile
+        display: none
+        @include media-breakpoint-up(desktop)
+            display: block
+            @include meta
+            a
+                color: $color-accent
+                text-decoration: none
+    .menu
+        @include media-breakpoint-up(desktop)
+            // Bouton thématiques
+            span
+                border-radius: $btn-border-radius
+            [aria-expanded=true]
+                background: $color-background
+                color: $color-accent !important
+            .has-children:not(.header-i18n)
+                .dropdown-menu:not(.is-titled)
+                    .nav-level-2
+                        margin-top: $spacing-3
+                        display: inline-flex
+                        flex-wrap: wrap
+                        justify-content: center
+                        max-width: columns(8)
+                        margin-left: offset(2)
+                        grid-row-gap: $spacing-3
+                        a
+                            color: $color-accent
+                            font-size: pxToRem(40)
+                            font-weight: bold

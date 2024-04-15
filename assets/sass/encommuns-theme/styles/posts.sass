@@ -1,0 +1,56 @@
+.posts__page
+    @include media-breakpoint-up(desktop)
+        .hero
+            .content
+                display: block
+                .hero-text
+                    width: columns(8)
+                    margin-left: offset(2)
+                    margin-bottom: $spacing-5
+                figure
+                    margin-left: offset(4)
+                    width: 100%
+                    width: columns(8)
+            &--image-square,
+            &--image-landscape
+                figure
+                    // Utilisé à l'envers pour avoir un léger écart
+                    // Utilisé à l'envers pour retomber sur la colonne
+            &--image-portrait
+                .content
+                    figure
+                        // Utilisé à l'envers pour retomber sur la colonne
+                        width: columns(4)
+                        // margin-left: 0
+        .post-sidebar
+            > div
+                position: relative !important
+                top: 0 !important
+                .post-infos
+                    > li
+                        border: none !important
+                        display: block
+                        > span
+                            display: block
+                        > ul
+                            text-align: left
+                            > li
+                                margin-left: 0
+                                margin-right: $spacing-2
+                .toc-container
+                    padding-top: $spacing-2 !important
+                    border: none !important
+.post 
+    .media 
+        img
+            aspect-ratio: 1
+
+// Titre de catégorie
+.posts_categories__term
+    .hero
+        .hero-text
+            margin-left: offset(2)
+            width: columns(8)
+        h1
+            color: $color-accent
+            text-align: center
