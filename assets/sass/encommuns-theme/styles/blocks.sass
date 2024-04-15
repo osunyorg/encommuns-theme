@@ -4,8 +4,11 @@
     .block-posts
         &--large 
             @include in-page-without-sidebar
-                .large 
-                    .post 
+                .large
+                    .post
+                        align-items: center
+                        .post-content
+                            width: columns(6)
                         .post-title
                             font-weight: bold
         &--list
