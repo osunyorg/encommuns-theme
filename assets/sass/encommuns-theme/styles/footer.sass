@@ -4,9 +4,20 @@
     padding-top: 0 !important
     .container:first-of-type
         padding-bottom: 0
+    a
+        &::after
+            content: ""
     .footer-logo,
     .footer-site
         display: none
     .container
         justify-content: center !important
         text-align: center
+    .nav-legal
+        display: inline
+        li
+            display: inline
+    .footer-credit
+        display: inline !important
+        &:before
+            content: " — "
