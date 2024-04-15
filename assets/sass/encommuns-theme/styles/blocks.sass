@@ -1,4 +1,6 @@
 .blocks
+    .block:last-child
+        margin-bottom: 0
     .block-posts
         &--large 
             @include in-page-without-sidebar
@@ -14,6 +16,8 @@
                     border-bottom: none
                 @include in-page-without-sidebar
                     justify-content: space-between
+                    .post-content
+                        width: columns(8)
                     .post-meta
                         position: relative !important
                     .media

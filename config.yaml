@@ -12,3 +12,6 @@ params:
   persons:
     single:
       backlinks: true
+  posts:
+    index:
+      truncate_description: 0
