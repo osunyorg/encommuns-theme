@@ -1,17 +1,22 @@
 .blocks
     .block-posts
-        @include in-page-without-sidebar
-            &--large 
+        &--large 
+            @include in-page-without-sidebar
                 .large 
                     .post 
                         .post-title
                             font-weight: bold
-            &--list
-                    article
-                        justify-content: space-between
-                        .post-meta
-                            position: relative !important
-                        .media
-                            order: 2
-                            img
-                                aspect-ratio: 1
+        &--list
+            background: white
+            padding-top: $spacing-5
+            article
+                &:last-of-type
+                    border-bottom: none
+                @include in-page-without-sidebar
+                    justify-content: space-between
+                    .post-meta
+                        position: relative !important
+                    .media
+                        order: 2
+                        img
+                            aspect-ratio: 1
