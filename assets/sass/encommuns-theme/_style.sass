@@ -5,6 +5,35 @@ body
     filter: drop-shadow(0 0 8px #00000006)
     .dropdown-menu
         border-top: solid 1px $color-border
+    @include media-breakpoint-down(desktop)
+        .site-name
+            display: none
+    @include media-breakpoint-up(desktop)
+        .site-name
+            @include meta
+            a
+                color: $color-accent
+                text-decoration: none
+        .menu
+            span
+                border-radius: 4px
+            [aria-expanded=true]
+                background: $color-background
+                color: $color-accent !important
+            .has-children:not(.header-i18n)
+                .dropdown-menu:not(.is-titled)
+                    .nav-level-2
+                        margin-top: $spacing-3
+                        display: inline-flex
+                        flex-wrap: wrap
+                        justify-content: center
+                        max-width: columns(8)
+                        margin-left: offset(2)
+                        grid-row-gap: $spacing-3
+                        a
+                            color: $color-accent
+                            font-size: pxToRem(40)
+                            font-weight: bold
 #document-footer
     border-top: solid 1px $color-border
     padding-top: 0 !important
