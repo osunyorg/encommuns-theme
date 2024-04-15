@@ -29,6 +29,11 @@
                 color: $color-accent
                 text-decoration: none
     .menu
+        a[target=_blank]
+            &::after
+                content: ''
+            &:last-child
+                color: $color-other
         @include media-breakpoint-up(desktop)
             // Bouton thématiques
             span
