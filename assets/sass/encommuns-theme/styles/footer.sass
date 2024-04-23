@@ -1,23 +1,47 @@
-// Footer très simple (pas de logo, bordure en haut)
+main
+    background: var(--color-background)
+    filter: drop-shadow(0 0 8px #00000006)
+    margin-bottom: 800px
+.blocks 
+    .block:last-child
+        padding-bottom: $spacing-5
 #document-footer
-    border-top: solid 1px $color-border
-    padding-top: 0 !important
-    .container:first-of-type
-        padding-bottom: 0
-    a
-        &::after
-            content: ""
-    .footer-logo,
+    bottom: 0
+    padding-top: 100vh !important
+    position: fixed !important
+    text-align: center
+    z-index: -1 !important
+    .footer-logo
+        img
+            margin: auto
+    .container
+        justify-content: center !important
+        + .container
+            align-items: center !important
+            flex-direction: column-reverse
+    .footer-social
+        .nav-social
+            li
+                a
+                    @include h3
+            @include media-breakpoint-up(desktop)
+                li
+                    display: inline
+                    margin-left: $spacing-3
+                    margin-right: $spacing-3
     .footer-site
         display: none
-    .container
-        justify-content: end !important
-        text-align: center
-    .nav-legal
-        display: inline
-        li
+    .footer-legals
+        margin-top: $spacing-6
+    @include media-breakpoint-up(desktop)
+        .nav-legal
             display: inline
-    .footer-credit
-        display: inline !important
-        &:before
-            content: " — "
+            li
+                display: inline
+                .nav-level-2
+                    li
+                        @include meta
+        .footer-credit
+            display: inline !important
+            &:before
+                content: " — "

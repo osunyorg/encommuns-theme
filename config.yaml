@@ -3,6 +3,9 @@ paginate: 18
 enableRobotsTXT: true
 removePathAccents: true
 params:
+  logo:
+    header: "/assets/images/logo.svg"
+    footer: "/assets/images/logo-avatar.svg"
   summary:
     position: hero
   breadcrumb:
