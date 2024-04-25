@@ -45,14 +45,10 @@
                                 font-family: $heading-font-family
                                 font-weight: bold
                                 initial-letter: 2
-                                margin-right: $spacing-2
-                                margin-top: $spacing-2
-                                padding: $spacing-2
-                                @include media-breakpoint-up(desktop)
-                                    initial-letter: 3
-                                    margin-right: $spacing-3
-                                    margin-top: $spacing-4
-                                    padding: $spacing-4 $spacing-5
+                                margin-bottom: -4px
+                                margin-right: $spacing-3
+                                margin-top: pxToRem(40)
+                                padding: pxToRem(40) pxToRem(50)
     @include media-breakpoint-down(desktop)
         .toc-cta
             border: none
