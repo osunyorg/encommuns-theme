@@ -18,3 +18,4 @@ params:
   posts:
     index:
       layout: grid
+      truncate_description: 0
