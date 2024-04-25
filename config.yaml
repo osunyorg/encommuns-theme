@@ -17,4 +17,4 @@ params:
       backlinks: true
   posts:
     index:
-      truncate_description: 0
+      layout: grid

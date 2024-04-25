@@ -1,6 +1,14 @@
 .blocks
     .block:last-child
         margin-bottom: 0
+    .block-chapter
+        &--alt_background
+            .chapter
+                background: none !important
+                .text
+                    padding: 0 !important
+                    @include lead-hero
+
     .block-posts
         &--large 
             .post 
