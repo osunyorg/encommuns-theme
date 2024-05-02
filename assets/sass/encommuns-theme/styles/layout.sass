@@ -23,9 +23,11 @@ picture
 // Titre de catégorie
 .posts_categories__term
     .hero
-        .hero-text
-            margin-left: offset(2)
-            width: columns(8)
         h1
             color: $color-accent
-            text-align: center
+        @include media-breakpoint-up(desktop)
+            .hero-text
+                margin-left: offset(2)
+                width: columns(8)
+            h1
+                text-align: center
