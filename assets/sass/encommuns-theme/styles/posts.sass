@@ -16,25 +16,20 @@
                     figure
                         width: columns(4)
         .post-sidebar
-            > div
-                position: relative !important
-                top: 0 !important
-                .post-infos
-                    > li
-                        border: none !important
-                        display: block
-                        > span
-                            display: block
-                        > ul
-                            text-align: left
-                            > li
-                                margin-left: 0
-                                margin-right: $spacing-2
-                .toc-container
-                    padding-top: $spacing-2 !important
-                    border: none !important
-        // Lettrine
+            position: relative !important
+            padding-left: offset(2)
+            width: columns(10) !important
+            .toc-container
+                padding-top: $spacing-2 !important
+                width: 100%
         .blocks
+            // Centrage du texte
+            .heading h2,
+            .block-chapter .block-content,
+            .block-persons .block-content
+                padding-left: offset(2) !important
+                width: columns(10)
+            // Lettrine
             .block-chapter
                 &:first-of-type
                     .chapter
