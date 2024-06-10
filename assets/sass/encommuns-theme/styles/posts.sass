@@ -26,7 +26,9 @@
             // Centrage du texte
             .heading h2,
             .block-chapter .block-content,
-            .block-persons .block-content
+            .block-persons .block-content,
+            .block-definitions .block-content,
+            .block-license .block-content
                 padding-left: offset(2) !important
                 width: columns(10)
             // Lettrine
@@ -44,6 +46,9 @@
                                 margin-right: $spacing-2
                                 margin-top: pxToRem(40)
                                 padding: pxToRem(40) pxToRem(50)
+        .block-siblings-navigation
+            .block-content
+                padding-left: 0 !important
     @include media-breakpoint-down(desktop)
         .toc-cta
             border: none
