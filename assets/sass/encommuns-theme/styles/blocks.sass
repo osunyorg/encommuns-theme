@@ -15,6 +15,9 @@
             padding-top: var(--grid-gutter)
             padding-bottom: var(--grid-gutter)
             margin-bottom: 0
+            @include in-page-without-sidebar
+                h2
+                    font-size: pxToRem(32)
             + .block-posts--list 
                 margin-top: 0
         &--large 
