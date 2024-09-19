@@ -36,6 +36,7 @@
         &--list
             background: white
             padding-top: $spacing-5
+            margin-bottom: 0
             article
                 &:last-of-type
                     border-bottom: none
@@ -49,6 +50,8 @@
                         order: 2
                         img
                             aspect-ratio: 1
+        + .block-call_to_action
+            margin-top: 0
     .block-datatable
         .block-content
             padding-left: 0 !important
@@ -60,3 +63,7 @@
         .events--grid
             @include full-page
                 grid-template-columns: repeat(2, 1fr)
+    .block-call_to_action
+        + .block-posts--list,
+        + .block-posts--grid
+            margin-top: 0
