@@ -25,6 +25,10 @@
                 .media
                     img
                         aspect-ratio: 1
+            @media (min-width: 992px) and (max-width: 1400px)
+                .post-title,
+                .post-subtitle
+                    font-size: pxToRem(40) !important
             @include in-page-without-sidebar
                 .large
                     .post

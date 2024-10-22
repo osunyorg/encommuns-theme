@@ -1,5 +1,4 @@
 theme: osuny
-paginate: 18
 enableRobotsTXT: true
 removePathAccents: true
 params:
@@ -19,4 +18,4 @@ params:
   posts:
     index:
       layout: grid
-      truncate_description: 0
+      truncate_description: 1000
