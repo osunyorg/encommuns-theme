@@ -19,3 +19,6 @@ params:
     index:
       layout: grid
       truncate_description: 1000
+  home:
+    head:
+      title: site
