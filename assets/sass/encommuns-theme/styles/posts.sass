@@ -74,11 +74,15 @@
             aspect-ratio: 1
             max-width: none
 
-.posts__section .posts--list
-    @include media-breakpoint-down(desktop)
-        article
-            flex-direction: column
-            .post-content
-                margin-left: 0
-            .media
-                margin-bottom: $spacing-2
+.posts__section,
+.authors__term,
+.posts_categories__term,
+.persons__page
+    .posts--list 
+        @include media-breakpoint-down(desktop)
+            article
+                flex-direction: column
+                .post-content
+                    margin-left: 0
+                .media
+                    margin-bottom: $spacing-2
