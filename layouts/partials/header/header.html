@@ -12,19 +12,16 @@
       </div>
       {{ partial "header/logo.html" }}
       {{ if $primary.items }}
-        {{ if $primary.items }}
-          {{ partial "header/button.html" }}
-          <div class="menu" id="navigation">
-            {{ partial "commons/menu.html"
-                (dict
-                  "kind" "primary"
-                  "dropdown" true
-                  "level" 1
-                  "i18n" site.Params.menu.i18n.display
-                  "context" .
-              )}}
-          </div>
-        {{ end }}
+        {{ partial "header/button.html" }}
+        <div class="menu" id="navigation">
+          {{ partial "commons/menu.html"
+              (dict
+              "kind" "primary"
+              "dropdown" true
+              "level" 1
+              "context" .
+            )}}
+        </div>
       {{ end }}
     </div>
   </nav>
