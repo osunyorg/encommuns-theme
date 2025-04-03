@@ -17,7 +17,7 @@ params:
       backlinks: true
   posts:
     index:
-      layout: grid
+      layout: list
       truncate_description: 1000
   home:
     head:

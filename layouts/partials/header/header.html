@@ -1,7 +1,7 @@
 {{ $primary := partial "GetMenu" "primary" }}
 
 <header id="document-header">
-  <nav aria-label="{{ i18n "commons.menu.main" }}">
+  <nav class="primary-menu" aria-label="{{ i18n "commons.menu.main" }}">
     <div class="container">
       <div class="site-name">
         {{ with site.GetPage "/" }}
@@ -16,11 +16,11 @@
         <div class="menu" id="navigation">
           {{ partial "commons/menu.html"
               (dict
-                "kind" "primary"
-                "dropdown" true
-                "level" 1
-                "context" .
-              ) }}
+              "kind" "primary"
+              "dropdown" true
+              "level" 1
+              "context" .
+            )}}
         </div>
       {{ end }}
     </div>
