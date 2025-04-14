@@ -1,74 +1,93 @@
 .blocks
-    .block:last-child
-        margin-bottom: 0
-    .block-chapter
-        &--alt_background
-            .chapter
-                background: none !important
-                .text
-                    padding: 0 !important
-                    @include lead-hero
+    .block
+        &:last-child
+            margin-bottom: 0
 
-    .block-posts
-        &--grid
-            background: $color-3
-            padding-top: var(--grid-gutter)
-            padding-bottom: var(--grid-gutter)
-            margin-bottom: 0
-            @include in-page-without-sidebar
-                h2,
-                .post-subtitle
-                    font-size: pxToRem(32)
-            + .block-posts--list 
+        &-agenda
+            .events--grid
+                @include full-page
+                    grid-template-columns: repeat(2, 1fr)
+
+        &-call_to_action
+            + .block-posts--list,
+            + .block-posts--grid
                 margin-top: 0
-        &--large 
-            .post 
-                .media
-                    img
-                        aspect-ratio: 1
-            @media (min-width: 992px) and (max-width: 1400px)
-                .post-title,
-                .post-subtitle
-                    font-size: pxToRem(40) !important
-            @include in-page-without-sidebar
-                .large
-                    .post
-                        align-items: center
-                        .post-content
-                            width: columns(6)
-                        .post-title
-                            font-weight: bold
-        &--list
-            background: white
-            padding-top: $spacing-5
-            margin-bottom: 0
-            article
-                &:last-of-type
-                    border-bottom: none
+
+
+        &-chapter
+            &--alt_background
+                .chapter
+                    background: none !important
+                    .text
+                        padding: 0 !important
+                        @include lead-hero
+
+        &-datatable
+            .block-content
+                padding-left: 0 !important
+
+        &-image
+            @include in-page-with-sidebar
+                .block-content
+                    padding-left: offset(2) !important
+                    figure
+                        margin-right: offset(2) !important
+                        width: 100%
+                        picture
+                            margin-right: 0
+                            img
+                                max-height: none
+
+        &-persons
+            @include full-page
+                .persons
+                    grid-template-columns: repeat(4, 1fr)
+
+        &-posts
+            &--grid
+                background: $color-3
+                padding-top: var(--grid-gutter)
+                padding-bottom: var(--grid-gutter)
+                margin-bottom: 0
                 @include in-page-without-sidebar
-                    justify-content: space-between
-                    .post-content
-                        width: columns(8)
-                    .post-meta
-                        position: relative !important
+                    h2,
+                    .post-subtitle
+                        font-size: pxToRem(32)
+                + .block-posts--list 
+                    margin-top: 0
+            &--large 
+                .post 
                     .media
-                        order: 2
                         img
                             aspect-ratio: 1
-        + .block-call_to_action
-            margin-top: 0
-    .block-datatable
-        .block-content
-            padding-left: 0 !important
-    .block-persons
-        @include full-page
-            .persons
-                grid-template-columns: repeat(4, 1fr)
-    .block-agenda
-        .events--grid
-            @include full-page
-                grid-template-columns: repeat(2, 1fr)
-    .block-call_to_action
-        + .block-posts--list,
-        + .block-posts--grid
-            margin-top: 0
+                @media (min-width: 992px) and (max-width: 1400px)
+                    .post-title,
+                    .post-subtitle
+                        font-size: pxToRem(40) !important
+                @include in-page-without-sidebar
+                    .large
+                        .post
+                            align-items: center
+                            .post-content
+                                width: columns(6)
+                            .post-title
+                                font-weight: bold
+            &--list
+                background: white
+                padding-top: $spacing-5
+                margin-bottom: 0
+                article
+                    &:last-of-type
+                        border-bottom: none
+                    @include in-page-without-sidebar
+                        justify-content: space-between
+                        .post-content
+                            width: columns(8)
+                        .post-meta
+                            position: relative !important
+                        .media
+                            order: 2
+                            img
+                                aspect-ratio: 1
+            + .block-call_to_action
+                margin-top: 0
