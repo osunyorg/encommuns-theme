@@ -50,6 +50,9 @@
                 padding-bottom: var(--grid-gutter)
                 margin-bottom: 0
                 @include in-page-without-sidebar
+                    .grid
+                        @include media-breakpoint-between(md, xl)
+                            grid-template-columns: repeat(2, 1fr)
                     h2,
                     .post-subtitle
                         font-size: pxToRem(32)
@@ -67,7 +70,6 @@
                 @include in-page-without-sidebar
                     .large
                         .post
-                            align-items: center
                             .post-content
                                 width: columns(6)
                             .post-title
