@@ -14,13 +14,10 @@
       {{ if $primary.items }}
         {{ partial "header/button.html" }}
         <div class="menu" id="navigation">
-          {{ partial "commons/menu.html"
-              (dict
-              "kind" "primary"
-              "dropdown" true
-              "level" 1
-              "context" .
-            )}}
+          {{ partial "commons/menu.html" (dict
+            "kind" "primary"
+            "context" .
+          ) }}
         </div>
       {{ end }}
     </div>
