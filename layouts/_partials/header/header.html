@@ -1,4 +1,6 @@
+
 {{ $primary := partial "GetMenu" "primary" }}
+{{ partial "header/hooks/before-start.html" . }}
 
 <header id="document-header">
   <nav class="primary-menu" aria-label="{{ i18n "commons.menu.main" }}">
