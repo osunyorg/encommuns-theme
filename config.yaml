@@ -20,6 +20,10 @@ params:
     index:
       layout: list
       truncate_description: 1000
+  projects:
+    single:
+      meta:
+        position: none
   home:
     head:
       title: site
