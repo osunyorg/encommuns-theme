@@ -1,9 +1,15 @@
 .posts__page
+    .section-sidebar--with-toc
+        .content-meta.with-labels
+            > li:last-child
+                border-bottom: 1px solid var(--color-border)
+
     @media (min-width: 992px) and (max-width: 1400px)
         .hero-text
             h1, 
             h1 span
                 font-size: pxToRem(46)
+
     @include media-breakpoint-up(desktop)
         .hero
             .content
@@ -20,11 +26,16 @@
                 .content
                     figure
                         width: columns(4)
-        .post-sidebar
+        .section-sidebar.section-post
             position: relative !important
             padding-left: offset(2)
             width: columns(10) !important
             margin-bottom: $spacing-5
+
+            &.section-sidebar--with-toc 
+                .meta-container
+                    margin-bottom: 0
+
             .toc-container
                 padding-top: $spacing-2 !important
                 width: 100%
@@ -70,11 +81,17 @@
         .block-siblings-navigation
             .block-content
                 padding-left: 0 !important
+
     @include media-breakpoint-down(desktop)
+        .section-sidebar--with-toc
+            .meta-container + .toc-cta
+                margin-top: $spacing-2 !important
+
         .toc-cta
             border: none
             margin-top: var(--grid-gutter)
             position: relative
+            top: unset !important
         .toc-content
             background: var(--color-background)
 .post 
