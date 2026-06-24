@@ -4,10 +4,16 @@
             > li:last-child
                 border-bottom: 1px solid var(--color-border)
 
+    .hero
+        .content
+            h1
+                span
+                    color: $color-text
+                    margin-top: $spacing-3
+                    font-size: var(--lead-hero-size)
     @media (min-width: 992px) and (max-width: 1400px)
         .hero-text
-            h1, 
-            h1 span
+            h1
                 font-size: pxToRem(46)
 
     @include media-breakpoint-up(desktop)
@@ -95,6 +101,12 @@
         .toc-content
             background: var(--color-background)
 .post 
+    .post-subtitle
+        color: $color-text
+        margin-top: $spacing-2
+        font-size: var(--body-size)
+    [itemprop="abstract"]
+        line-height: 150%
     .media 
         img
             aspect-ratio: 1

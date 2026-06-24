@@ -53,8 +53,7 @@
                     .posts
                         @include media-breakpoint-between(md, xl)
                             grid-template-columns: repeat(2, 1fr)
-                    h2,
-                    .post-subtitle
+                    .post-title
                         font-size: pxToRem(32)
                 + .block-posts--list 
                     margin-top: 0
@@ -64,8 +63,7 @@
                         img
                             aspect-ratio: 1
                 @media (min-width: 992px) and (max-width: 1400px)
-                    .post-title,
-                    .post-subtitle
+                    .post-title
                         font-size: pxToRem(40) !important
                 @include in-page-without-sidebar
                     .posts
